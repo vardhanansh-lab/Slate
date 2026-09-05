@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-05T00:00:00Z",
+  "title": "Design System: Slate",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "canonical": "oklch(98.5% 0.004 240)",
+        "tonalRamp": ["#0B0D11", "#171B22", "#2A303B", "#454D5C", "#8A93A3", "#C4CBD6", "#E7EBF1", "#FBFCFE"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Near-Black Ink",
+        "canonical": "oklch(19% 0.015 260)",
+        "tonalRamp": ["#000000", "#10131A", "#1E2330", "#333B4D", "#565F73", "#8891A0", "#C2C8D2", "#F2F4F7"]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Dark Navy Slate",
+        "canonical": "oklch(33% 0.05 255)",
+        "tonalRamp": ["#0F131C", "#1A2233", "#242F47", "#33415C", "#5B6E8F", "#8FA1BD", "#C4D0E2", "#EAF0F9"]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Slate Blue",
+        "canonical": "oklch(48% 0.19 262)",
+        "tonalRamp": ["#0A1230", "#101E52", "#182E7C", "#2242AC", "#2F5FEB", "#6C8DF2", "#A9BEF7", "#DCE6FC"]
+      },
+      "tint": {
+        "role": "neutral",
+        "displayName": "Pale Blue Tint",
+        "canonical": "oklch(94.5% 0.02 250)",
+        "tonalRamp": ["#0A1F4D", "#16336E", "#2A4C93", "#5578C4", "#8FA9DE", "#C3D5F1", "#DEEAFA", "#EAF1FF"]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Hairline Blue-Grey",
+        "canonical": "oklch(89% 0.015 250)",
+        "tonalRamp": ["#111826", "#212C3F", "#37455C", "#576E87", "#8C9AB3", "#B7C3D5", "#D2DBE8", "#DCE4F0"]
+      },
+      "error": {
+        "role": "semantic",
+        "displayName": "Muted Red",
+        "canonical": "oklch(43% 0.16 27)",
+        "tonalRamp": ["#2B0705", "#4A0C09", "#731712", "#96201A", "#B3261E", "#D66B62", "#EFAFA9", "#FBECEB"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Landing page hero headline only." },
+      "h1": { "displayName": "Headline", "purpose": "Page-level titles." },
+      "h2": { "displayName": "Title", "purpose": "Panel and section titles." },
+      "h3": { "displayName": "Subtitle", "purpose": "Card-level headlines." },
+      "body-lg": { "displayName": "Body Large", "purpose": "Supporting copy under headlines." },
+      "body": { "displayName": "Body", "purpose": "Default UI text, inputs, buttons." },
+      "small": { "displayName": "Small", "purpose": "Secondary labels, links, captions." },
+      "micro": { "displayName": "Micro", "purpose": "Tags, index numbers, fine print." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "pulse-soft", "value": "opacity 1 -> 0.5 -> 1, 1.6s ease-in-out infinite", "purpose": "Skeleton loading placeholders." },
+      { "name": "spin-slow", "value": "rotate 360deg, 0.9s linear infinite", "purpose": "Inline loading spinners." },
+      { "name": "fade-up", "value": "opacity 0->1 + translateY(6px)->0, 0.3s ease-out", "purpose": "Result card entrance, staggered by index." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call-to-action: Generate hooks, Enhance, Download.",
+      "html": "<button class=\"ds-btn-primary\">Generate hooks</button>",
+      "css": ".ds-btn-primary { background: #2F5FEB; color: #FFFFFF; padding: 10px 20px; border-radius: 8px; font-family: 'Inter', ui-sans-serif, sans-serif; font-size: 0.9375rem; font-weight: 500; border: none; transition: background-color 0.15s ease; } .ds-btn-primary:hover { background: rgba(47,95,235,0.9); } .ds-btn-primary:focus-visible { outline: 2px solid #2F5FEB; outline-offset: 2px; } .ds-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary actions: Try again, Copy prompt, Start over.",
+      "html": "<button class=\"ds-btn-secondary\">Copy prompt</button>",
+      "css": ".ds-btn-secondary { background: #FBFCFE; color: #10131A; padding: 10px 20px; border-radius: 8px; border: 1px solid #DCE4F0; font-family: 'Inter', ui-sans-serif, sans-serif; font-size: 0.9375rem; font-weight: 500; transition: background-color 0.15s ease; } .ds-btn-secondary:hover { background: rgba(234,241,255,0.5); } .ds-btn-secondary:focus-visible { outline: 2px solid #2F5FEB; outline-offset: 2px; }"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Archetype label pill (e.g. 'Bold Claim').",
+      "html": "<span class=\"ds-tag\">Bold Claim</span>",
+      "css": ".ds-tag { display: inline-flex; align-items: center; background: #EAF1FF; color: #2F5FEB; padding: 4px 10px; border-radius: 999px; font-family: 'Inter', ui-sans-serif, sans-serif; font-size: 0.75rem; font-weight: 500; }"
+    },
+    {
+      "name": "Result Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Flat, hairline-bordered card used for hook results and grouped content.",
+      "html": "<div class=\"ds-card\"><span class=\"ds-tag\">Bold Claim</span><p class=\"ds-card-title\">This $29 tool replaces your entire morning routine.</p></div>",
+      "css": ".ds-card { background: #FBFCFE; border: 1px solid #DCE4F0; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 12px; } .ds-card-title { font-family: 'Space Grotesk', ui-sans-serif, sans-serif; font-size: 1.125rem; font-weight: 600; line-height: 1.4; color: #10131A; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Shot List",
+    "overview": "Slate is built like a disciplined production tool, not a marketing surface: one thing at a time, numbered and deliberate, nothing dressed up beyond what it needs. The vocabulary is drawn from actual film/video production (a slate, a shot list, a take) rather than generic SaaS language, and that restraint carries all the way through the visual system. There is exactly one place the design raises its voice, the slate-stripe logomark, and everything else stays quiet and consistent around it. This system explicitly rejects the generic-AI-tool scaffold: no tiny uppercase tracked eyebrows above every section, no arrow-suffixed button text, no numbered 01/02/03 markers used as decoration rather than a real sequence, no identical rounded cards sharing the same soft grey shadow, and no pale grey-on-white secondary text.",
+    "keyCharacteristics": [
+      "One signature element (the logomark), everything else deliberately quiet",
+      "Flat, hairline-bordered surfaces; no drop shadows anywhere",
+      "A five-color core palette, no decorative gradients",
+      "Real content over empty placeholder space in every preview/example block",
+      "Film/production vocabulary over generic SaaS language"
+    ],
+    "rules": [
+      { "name": "The Five-Color Rule", "body": "The palette is exactly bg / ink / muted / accent / tint / border, plus one semantic error exception. No new hues, no gradients.", "section": "colors" },
+      { "name": "The Accent Scarcity Rule", "body": "Slate Blue marks the one actionable/branded thing per view. Never a wash or background fill on its own.", "section": "colors" },
+      { "name": "The Named-Scale Rule", "body": "The type scale is eight named steps (display through micro), not default Tailwind text-xl/text-2xl steps used without intention.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "No box-shadow on cards, buttons, panels, or containers, at rest or on hover. Separation is a 1px border or nothing.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep secondary text at Dark Navy Slate (#33415C) or darker, never a pale washed-out grey.",
+      "Do separate every card/panel/input with a 1px Hairline Blue-Grey border, never a shadow.",
+      "Do fill empty preview/example spots with real, specific content instead of an abstract icon-only placeholder.",
+      "Do ground copy and iconography in film/video production vocabulary where it fits naturally.",
+      "Do use Slate Blue accent sparingly, one primary action or active state per view."
+    ],
+    "donts": [
+      "Don't use tiny uppercase tracked eyebrow labels above sections.",
+      "Don't suffix button or link text with a literal arrow character; use a small SVG chevron element instead.",
+      "Don't use numbered 01/02/03 markers as pure decoration unless the numbers represent a real sequence.",
+      "Don't apply box-shadow to cards or buttons, at rest or on hover.",
+      "Don't introduce a sixth color outside bg / ink / muted / accent / tint / border.",
+      "Don't leave a bordered preview box visually empty, it reads as unfinished, not minimal."
+    ]
+  }
+}
