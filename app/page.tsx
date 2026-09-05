@@ -50,13 +50,13 @@ export default function Home() {
                 Bold Claim
               </span>
               <p className="text-h3 font-semibold leading-snug text-ink">
-                This $29 tool replaces your entire morning routine.
+                This tool replaces your entire morning routine.
               </p>
             </div>
             <ul className="flex flex-col gap-1.5 border-t border-border pt-4">
               <li className="flex gap-3 text-small">
                 <span className="w-10 shrink-0 font-medium text-muted">Hook</span>
-                <span className="text-muted">Close-up on the price tag, then the product.</span>
+                <span className="text-muted">Close-up on the product, then a confident look to camera.</span>
               </li>
               <li className="flex gap-3 text-small">
                 <span className="w-10 shrink-0 font-medium text-muted">Demo</span>
