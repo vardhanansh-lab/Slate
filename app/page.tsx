@@ -92,18 +92,13 @@ export default function Home() {
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-tint text-accent">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
-                    d="M12 3.5 13.2 7l3.5 1.2-3.5 1.2L12 13l-1.2-3.6L7.3 8.2 10.8 7 12 3.5Z"
+                    d="M4 9V6a2 2 0 0 1 2-2h3M20 9V6a2 2 0 0 0-2-2h-3M4 15v3a2 2 0 0 0 2 2h3M20 15v3a2 2 0 0 1-2 2h-3"
                     stroke="currentColor"
                     strokeWidth="1.6"
+                    strokeLinecap="round"
                     strokeLinejoin="round"
                   />
-                  <path
-                    d="M18 13.5 18.6 15.4 20.5 16 18.6 16.6 18 18.5 17.4 16.6 15.5 16 17.4 15.4 18 13.5Z"
-                    stroke="currentColor"
-                    strokeWidth="1.4"
-                    strokeLinejoin="round"
-                  />
-                  <path d="M5 20.5 12 14.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+                  <circle cx="12" cy="12" r="3.25" stroke="currentColor" strokeWidth="1.6" />
                 </svg>
               </span>
               <h2 className="font-head text-h2 font-semibold text-ink">Polish</h2>
